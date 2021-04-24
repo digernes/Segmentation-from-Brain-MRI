@@ -7,7 +7,7 @@ loading server extension voila
 In which we did not manage to find any documentation on this issue that helped for us. 
 
 Trying to work around this, we also faced a number of 404 not found and 500 server side errors along with some unexpected compatibility issues with nbconvert version. 
-Imagening that this would be a relatively straight forward task, we did not ask for help in time and unfortunately left it unfinished due to time constraints. 
+Imagining that this would be a relatively straightforward task, we did not ask for help in time and unfortunately left it unfinished due to time constraints. 
 
 Repo to failed deployment attempt: 
 https://github.com/carstends/brain_app
