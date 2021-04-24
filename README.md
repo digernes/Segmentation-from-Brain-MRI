@@ -7,14 +7,14 @@ The data consists of brain MRI images of different patients. However some subjec
 The image data provided contains the subject ID at the beginning of the file name. 
 
 
-The first part seperated by a dash ('-') is used to seperate between the different subjects.
+The first part separated by a dash ('-') is used to separate between the different subjects.
 Example file name:
 |--------|
 027_S_0307-I34159-brain-ax3.png
 
 
-There are different ways to solve this. You could put all images of with the same subject IDs in seperate folders. When adding images to the validation and training sets, you could add whole folders. 
-Another solution is to pass a function to the DataBlock API that splits the images based on it's ID. In our case we found that around 27,5% of the images had an ID that started with 1, so these were used as the validation set. This is a quick fix to the problem, but it is not an optimal one. It can introduce unforseen biases since we don't know the full details on how the IDs are assigned. Furthermore it can become problematic if the dataset were to increase in number of elements and would cause an inbalance. 
+There are different ways to solve this. You could put all images with the same subject IDs in seperate folders. When adding images to the validation and training sets, you could add whole folders. 
+Another solution is to pass a function to the DataBlock API that splits the images based on it's ID. In our case we found that around 27,5% of the images had an ID that started with 1, so these were used as the validation set. This is a quick fix to the problem, but it is not an optimal one. It can introduce unforseen biases since we don't know the full details on how the IDs are assigned. Furthermore it can become problematic if the dataset were to increase in number of elements and would cause an imbalance. 
 
 
 Larger context: 
@@ -31,6 +31,4 @@ This repository contains two notebooks. These two notebooks are nearly identical
 
 ### Comparison of the results
 
-Before training any of the models, the initial thought was that the model trained on the skull-stripped images would outperform the other. This is because the image has less irrelevant noise in the image that could distract while training. However after training both models for 16 epochs, there weren't huge differences in segmentation results. If the models would have been trained for even longer, a more conclusive answer could be gained. The differences weren't as large as expected. 
-
-
+Before training any of the models, the initial thought was that the model trained on the skull-stripped images would outperform the other. This is because the image has less irrelevant noise in the image that could distract while training. However after training both models for 16 epochs, there weren't huge differences in segmentation results. If the models would have been trained for even longer, a more conclusive answer could be gained. The differences weren't as large as expected.
