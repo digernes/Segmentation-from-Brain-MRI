@@ -22,3 +22,15 @@ Larger context:
 The task at hand is to detect  and partition the region of the ventricles in 2D mid-slice MRI images of the brain through image segmentation.. The data set is from ADNI (Alzheimer's Disease Neuroimaging Initiative). The goal is to achieve precise localization of this region. 
 
 Image segmentation has an important role in computer-aided systems for medical diagnosis. Dividing an image into different areas based on a defined characteristic has a wide range of applications, which includes segmenting virtually all body organs as well as anomaly and border detection.
+
+
+This repository:
+===================================
+
+This repository contains two notebooks. These two notebooks are nearly identical, with a few differences. The first notebook `1_segmentation_on_brain.ipynb` is trained on brain MRI images of the brain without any surrounding skull. The second notebook `2_segmentation_on_full_skull_orig.ipynb` is trained on the pictures of the whole skull. The second repository has some more things that the was not included in the first. These two models are trained in parallel so the results could be compared.
+
+### Comparison of the results
+
+Before training any of the models, the initial thought was that the model trained on the skull-stripped images would outperform the other. This is because the image has less irrelevant noise in the image that could distract while training. However after training both models for 16 epochs, there weren't huge differences in segmentation results. If the models would have been trained for even longer, a more conclusive answer could be gained. The differences weren't as large as expected. 
+
+
